@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+
+    <script type="module" src="./script.js"></script>
+</head>
+
+<body>
+    <header class="centralize">
+        <h1>Smart Home</h1>
+    </header>
+
+    <main>
+
+        <div class="home centralize">
+            <div class="place" id="LED1">
+                <h2>LED1</h2>
+                <button class="light-bulb content centralize" onclick="toggleLampClick('LED1')">
+                    <span id="lightBulbLED1" class="material-symbols-outlined">lightbulb</span>
+                </button>
+                <div class="temperature-details centralize" >
+                    <span class="temperature centralize">
+                        <span class="material-symbols-outlined">device_thermostat</span>
+                        <h3 id="LED1Temp"></h3>
+                    </span>
+                    <span class="humidity centralize">
+                        <span class="material-symbols-outlined">humidity_indoor</span>
+                        <h3 id="LED1Humidity">20%</h3>
+                    </span>
+                </div>
+                <div class="accessories content">
+                    <button class="tv centralize" onclick="toggleTv('LED1')">
+                        <span class="material-symbols-outlined">tv_gen</span>
+                        <h3 id="LED1Tv">OFF</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div class="place">
+                <h2>LED2</h2>
+                <button class="light-bulb content centralize" onclick="toggleLampClick('LED2')">
+                    <span id="lightBulbLED2" class="material-symbols-outlined">lightbulb</span>
+                </button>
+                <div class="temperature-details centralize" >
+                    <span class="temperature centralize">
+                        <span class="material-symbols-outlined">device_thermostat</span>
+                        <h3 id="LED2Temp"></h3>
+                    </span>
+                    <span class="humidity centralize">
+                        <span class="material-symbols-outlined">humidity_indoor</span>
+                        <h3 id="LED2Humidity"></h3>
+                    </span>
+                </div>
+                <div class="accessories content">
+                    <button class="tv centralize" onclick="toggleTv('LED2')">
+                        <span class="material-symbols-outlined">tv_gen</span>
+                        <h3 id="LED2Tv">OFF</h3>
+                    </button>
+                </div>
+            </div>
+<!-- 
+            <div class="place">
+                <h2>Principal Room</h2>
+                <button class="light-bulb content centralize" onclick="toggleLamp('PrincipalRoom')">
+                    <span id="lightBulbPrincipalRoom" class="material-symbols-outlined">lightbulb</span>
+                </button>
+                <div class="temperature-details centralize" >
+                    <span class="temperature centralize">
+                        <span class="material-symbols-outlined">device_thermostat</span>
+                        <h3 id="PrincipalRoomTemp">31°C</h3>
+                    </span>
+                    <span class="humidity centralize">
+                        <span class="material-symbols-outlined">humidity_indoor</span>
+                        <h3 id="PrincipalRoomHumidity">20%</h3>
+                    </span>
+                </div>
+                <div class="accessories content">
+                    <button class="tv centralize" onclick="toggleTv('PrincipalRoom')">
+                        <span class="material-symbols-outlined">tv_gen</span>
+                        <h3 id="PrincipalRoomTv">OFF</h3>
+                    </button>
+                </div>
+            </div>  -->
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>
